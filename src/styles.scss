@@ -1,1 +1,288 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: '';
+}
+/* Normalize / Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  line-height: 1.2;
+}
+ol, ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+small {
+  font-size: 80%;
+}
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+input {
+  outline: none !important;
+}
+h1, h2, h3, h4, h5, h6 {
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 48px;
+  color: #ffffff;
+}
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 28px;
+  color: #ffffff;
+}
+.btn-started {
+  cursor: pointer;
+  position: relative;
+  width: 350px;
+  height: 60px;
+  line-height: 50px;
+  font-size: 20px;
+  color: #17106e;
+  border-radius: 50px;
+  background-image: linear-gradient(to right, #00f5ff , #00daff);
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: all 0.1s;
+  &:hover {
+    background-image: linear-gradient(to right, #00daff, #00f5ff);
+  }
+  &:active {
+    position: relative;
+    top: 2px;
+  }
+}
+
+.form-btn-started {
+  @extend .btn-started;
+  width: 250px;
+  height: 50px;
+  line-height: 40px;
+  border-radius: 3px;
+  font-size: 16px;
+
+
+}
+
+/* End Normalize / Reset styles */
+
+//Base styles
+#main {
+  margin: auto;
+  padding-bottom: 50px;
+  width: 100%;
+  max-width: 1920px;
+  height: auto;
+  background: url("assets/img/png/bg-body.png") center top no-repeat;
+  .container {
+    margin: auto;
+    .logo {
+      display: flex;
+      margin-top: 65px;
+      transition: all 0.1s;
+      .icon-logotype {
+        display: inline-block;
+        width: 33px;
+        height: 66px;
+        background: url("assets/img/png/logo.png") center center no-repeat;
+      }
+      .name-logotype {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        color: #ffffff;
+        span:nth-child(1) {
+          font-size: 34px;
+        }
+        span:nth-child(2) {
+          font-size: 24px;
+        }
+      }
+    }
+    section {
+      margin-top: 120px;
+      h1 {
+        margin-bottom: 40px;
+      }
+      .base-info {
+        display: flex;
+        flex-wrap: wrap;
+
+        .comments {
+          width: 100%;
+          max-width: 570px;
+          margin-bottom: 20px;
+          font-size: 18px;
+          color: #ffffff;
+        }
+        .desktop {
+          margin-right: -230px;
+          width: 100%;
+          max-width: 794px;
+          height: 673px;
+          background: url("assets/img/png/desktop.png") center center no-repeat;
+          background-size: contain;
+          .laptop-conditions {
+            display: none;
+          }
+        }
+        .box-button {
+          text-align: left;
+          .btn-started {
+            margin-top: 60px;
+          }
+        }
+      }
+    }
+    .desktop-conditions {
+      display: block;
+    }
+    .conditions {
+      margin-bottom: 50px;
+      h2 {
+        margin-top: 70px;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      div {
+        font-size: 16px;
+        color: #ffffff;
+        text-align: center;
+      }
+    }
+    .form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      input:nth-child(1){
+        margin-right: 30px;
+      }
+      input {
+        padding-left: 10px;
+        width: 350px;
+        height: 50px;
+        background: #15114b;
+        border-radius: 3px;
+        border: none;
+        line-height: 50px;
+        font-size: 14px;
+        color: #bbc2cc;
+        outline: none;
+        transition: all 0.2s;
+        &:focus {
+          padding-left: 15px;
+        }
+      }
+    }
+    .form-btn-started {
+      margin-top: 45px;
+    }
+  }
+}
+//End Base styles
+
+
+@media screen and (max-width: 1600px) {
+  #main .container {
+    section {
+      h1 {
+        text-align: center;
+      }
+      .base-info {
+        flex-direction: column;
+        .comments {
+          max-width: 100%;
+          text-align: center;
+        }
+        .box-button {
+          text-align: center;
+        }
+        .desktop {
+          margin: auto;
+          background: url("assets/img/png/laptop.png") center center no-repeat;
+          background-size: contain;
+          .laptop-conditions {
+            display: block;
+          }
+        }
+      }
+    }
+    .desktop-conditions {
+      display: none;
+    }
+    .form {
+      flex-direction: column;
+      align-items: center;
+      input:nth-child(1) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #main .container .form input, .btn-started, .form-btn-started {
+    padding: 0 10px;
+    width: auto;
+  }
+}
+
+
